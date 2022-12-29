@@ -90,6 +90,7 @@ app.post("/webhook", (req, res) => {
 
   if (body.object === "instagram") {
     // Return a '200 OK' response to all requests
+    console.log('Return a 200 OK response to all requests')
     res.status(200).send("EVENT_RECEIVED");
   }
   
