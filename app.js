@@ -88,6 +88,10 @@ app.post("/webhook", (req, res) => {
   console.log(`\u{1F7EA} Received webhook:`);
   console.dir(body, { depth: null });
 
+  if (body.object === "instagram") {
+    // Return a '200 OK' response to all requests
+    res.status(200).send("EVENT_RECEIVED");
+  }
   
   /*
   // Check if this is an event from a page subscription
