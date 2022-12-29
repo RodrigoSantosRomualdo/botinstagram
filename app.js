@@ -88,6 +88,8 @@ app.post("/webhook", (req, res) => {
   console.log(`\u{1F7EA} Received webhook:`);
   console.dir(body, { depth: null });
 
+  
+  /*
   // Check if this is an event from a page subscription
   if (body.object === "instagram") {
     // Return a '200 OK' response to all requests
@@ -149,7 +151,7 @@ app.post("/webhook", (req, res) => {
     // Return a '404 Not Found' if event is not recognized
     console.warn(`Unrecognized POST to webhook.`);
     res.sendStatus(404);
-  }
+  } */
 });
 
 // Verify that the callback came from Facebook.
